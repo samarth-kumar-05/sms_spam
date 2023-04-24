@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/predict.css">
+    <title>Predict Now</title>
+</head>
+<body>
+    <div class="mainContainer">
+    <header>
+        <div id="logo">
+            <a href="/" class="headA">SMS SPAM DETECTION</a>
+        </div>
+        <div class="headB">
+            <a href="/predict" class='headB'>Predict Message Type</a>
+        </div>
+    
+    </header>
+    <main>
+        <h2>Get the Prediction For the Text Recieved In a Simple Steps</h2>
+    <section id="variables">
+        <form action="/predict" method="POST">
+            <div class="steps">
+                <Label>Enter the Text Message : </Label>
+                <input type="text" id="message" name="message">
+            </div>
+
+            
+            <div id="btn">
+                <a href="/predict"><button type="submit" id="submit-btn">Predict Now</button></a>
+            </div>
+
+        </form>
+    </section>
+            <div id="ans">
+            <h3>This is the type of user our model detected</h3>
+            <p>{{predictedd}}</p>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
